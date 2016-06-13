@@ -1,0 +1,101 @@
+﻿<Window xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="KiepTetris.MainWindow"		
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    Title="KiepTetris" Height="1024" Width="768" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp"
+	Initialized="Tetris_Initialized" Background="Black" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None" Cursor="None" Icon="Icon.ico">
+	<DockPanel>
+        <StackPanel DockPanel.Dock="Right" Background="#00000000" Width="450">
+			<StackPanel.Resources>
+				<Style TargetType="{x:Type Label}">
+					<Setter Property="FontSize" Value="16" />
+					<Setter Property="FontFamily" Value="ComicSans" />
+					<Setter Property="FontWeight" Value="Bold" />
+					<Setter Property="Foreground" Value="AntiqueWhite" />
+				</Style>	
+			</StackPanel.Resources>
+
+			<Label FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">Score</Label>
+			<Label Name="scoreLabel" FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">0</Label>
+
+			<Label></Label>
+			<Label FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">High score</Label>
+			<Label Name="highscoreLabel" FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">0</Label>
+            <Label></Label>
+            <Label FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">Level</Label>
+            <Label Name="levelLabel" FontFamily="Verdana" FontSize="55" Foreground="White" Margin="50,0,0,0">0</Label>
+            <Label></Label>
+            <Label FontFamily="Verdana" FontSize="40" Foreground="White" Margin="50,0,0,0">up+down=exit</Label>
+            <Label></Label>
+            <Grid>
+                <Label FontFamily="Verdana" FontSize="28" Foreground="White" Name="gameOverLabel" Height="200" VerticalAlignment="Bottom" HorizontalAlignment="Center" VerticalContentAlignment="Bottom" Visibility="Hidden">
+                    <TextBlock TextAlignment="Center" Foreground="Red" VerticalAlignment="Bottom" FontSize="55">GAME<LineBreak/>OVER</TextBlock>
+                </Label>
+                <Grid Height="150" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Name="previewGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Grid>
+        </StackPanel>
+		<Border Name="border" DockPanel.Dock="Left" BorderThickness="0,0,5,0" BorderBrush="#FFFAFAC8">
+      	    <Grid MinWidth="100" Name="tetrisGrid">
+
+				
+				<!-- Rows -->
+				<Grid.RowDefinitions>					
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+					<RowDefinition  />
+
+				</Grid.RowDefinitions>
+				
+				<!--Columns-->
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+			
+				
+			</Grid>
+        </Border>
+	</DockPanel>
+</Window>
